@@ -1,5 +1,5 @@
 from random import randint as rint
-def pedir_numero(prompt: str) -> int | None:
+def pedir_numero(prompt: str) -> int | None: # Al no poder importarse desde 2.5 lo hago así
     """
     La funcion pedira un numero y lo convertira a entero automaticamente
     Args:
@@ -33,6 +33,8 @@ while hechos<intentos:
     if num == numero_secreto:
         print("Enorabuena has ganado")
         break
+    elif num>limite or num<1:
+        print("El numero que ha introducido esta fuera de rango")
     elif num!=numero_secreto:
         print(f"El numero {num} es {obtener_numero_mayor_menor(numero_secreto, num)}")
         hechos += 1
