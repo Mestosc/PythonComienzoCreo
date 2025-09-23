@@ -50,3 +50,6 @@ while hechos < intentos:
     elif num != numero_secreto:
         print(f"El numero {num} es {obtener_numero_mayor_menor(numero_secreto, num)}")
         hechos += 1
+
+if hechos == intentos:
+    print(f"Lo siento has perdido, el numero era {numero_secreto}")
