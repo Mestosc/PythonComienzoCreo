@@ -1,5 +1,11 @@
 from random import randint as rint
 
+limite = 10
+
+numero_secreto = rint(1, limite)
+
+hechos = 0
+intentos = 4
 
 def pedir_numero(prompt: str) -> int | None:  # Al no poder importarse desde 2.5 lo hago así
     """
@@ -15,15 +21,6 @@ def pedir_numero(prompt: str) -> int | None:  # Al no poder importarse desde 2.5
         except ValueError as e:
             print(f"Introduce un valor valido, fallo: {e}")
             continue
-
-
-limite = 10
-
-numero_secreto = rint(1, limite)
-
-hechos = 0
-intentos = 4
-
 
 def obtener_numero_mayor_menor(num_random: int, num_input: int) -> str:
     """
