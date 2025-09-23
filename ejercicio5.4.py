@@ -40,7 +40,7 @@ def obtener_numero_mayor_menor(num_random: int, num_input: int) -> str:
 while hechos < intentos:
     num = pedir_numero("Introduzca numero a adivinar: ")
     if num == numero_secreto:
-        print("Enorabuena has ganado")
+        print(f"Enorabuena has ganado, en un total de {hechos} {"intentos" if intentos>1 else "intento"}")
         break
     elif num > limite or num < 1:
         print("El numero que ha introducido esta fuera de rango")
